@@ -1,3 +1,4 @@
+require('dotenv').config
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -12,11 +13,11 @@ mongoose.connect(
 
 const db = mongoose.connection;
 db.on("error", (error) => console.error(error));
-db.once("open", () => console.log("Connect to database"));
+db.once("open", () => console.log("Connected to database"));
 
 app.use(express.json());
 
 const poemRouter = require("./routes/poem");
 app.use("/poem", poemRouter);
 
-app.listen(8080, () => console.log("server startead"));
+app.listen(process.env.PORT || 8080, () => console.log("server started"));
