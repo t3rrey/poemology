@@ -1,0 +1,25 @@
+GET http://localhost:8080/poem
+
+###
+
+GET http://localhost:8080/poem/6110aa0a91c63d08faac255e
+
+### 
+
+PATCH http://localhost:8080/poem/6110aa0a91c63d08faac255e
+Content-Type: application/json
+
+{
+    "likes": 10
+}
+###
+
+POST http://localhost:8080/poem
+Content-Type: application/json
+
+{
+    "title": "My test poem",
+    "author": "Lachlan Terrey",
+    "content": "This is a poem about why i hate poetry",
+    "likes": 0
+}
