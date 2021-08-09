@@ -1,10 +1,13 @@
 import "./App.css";
+import Header from "./components/Header";
+import axios from 'axios';
 
 import Poem from "./components/Poem";
 
 function App() {
   return (
     <div className="App">
+      <Header />
       <Poem
         title="My favourite poem"
         author="Lachlan Terrey"
@@ -15,4 +18,7 @@ function App() {
   );
 }
 
+const getPoem = async () => {
+    axios.get()
+}
 export default App;
