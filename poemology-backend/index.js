@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
+const PORT = process.env.PORT || 8080
 
 mongoose.connect(
   "mongodb+srv://mgdbpass:mgdbpass@cluster0.sczhx.mongodb.net/Cluster0?retryWrites=true&w=majority",
@@ -19,6 +20,6 @@ app.use(express.json());
 const poemRouter = require("./routes/poem");
 app.use("/poem", poemRouter);
 
-app.listen(process.env.PORT || 8080, () =>
-  console.log("Server loaded on heroku")
+app.listen(PORT, () =>
+  console.log("Server loaded on heroku and running on port" + PORT)
 );

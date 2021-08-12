@@ -1,6 +1,5 @@
 const express = require("express");
 const router = express.Router();
-
 const poem = require("../models/poem");
 //Getting all Poems
 
