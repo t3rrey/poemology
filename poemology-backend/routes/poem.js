@@ -23,7 +23,7 @@ router.post("/", async (req, res) => {
     title: req.body.title,
     author: req.body.author,
     content: req.body.content,
-    likes: req.body.likes,
+    likes: 0,
   });
   try {
     const newPoem = await poemtest.save();
