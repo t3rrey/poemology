@@ -33,15 +33,15 @@ db.once("open", () => console.log("Connected to database"));
 app.use(express.json());
 app.use(allowCrossDomain);
 
-app.use(function (req, res, next) {
-  if (req.header("Authorization") !== "bob") {
-    //const error = new Error('Unauthorized');
-    //error.c
-    res.status(401).send();
-  }
+// app.use(function (req, res, next) {
+//   if (req.header("Authorization") !== "bob") {
+//     //const error = new Error('Unauthorized');
+//     //error.c
+//     res.status(401).send();
+//   }
 
-  next();
-});
+//   next();
+// });
 
 const poemRouter = require("./routes/poem");
 app.use("/poem", poemRouter);
