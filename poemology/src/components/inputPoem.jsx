@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "../styles/InputPoem.css";
 
 const InputPoem = () => {
   const [title, setTitle] = useState("");
@@ -34,7 +35,7 @@ const InputPoem = () => {
 
   return (
     <div>
-      <form action="submit" onSubmit={handleSubmit}>
+      <form action="submit" onSubmit={handleSubmit} className="login-form">
         <label htmlFor="Title">Title: </label>
         <input
           type="text"

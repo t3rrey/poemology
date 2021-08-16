@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const header = () => {
   return (
     <div className="main-logo">
-      <h1 className="main-logo-header">poemology</h1>
+      <h1 className="main-logo-header">Poemology.</h1>
       <Link to="/add">
         <button className="main-addPoem-btn">
           <svg

@@ -20,12 +20,9 @@
 }
 .main-addPoem-btn:hover {
   background: blue;
+  fill: white;
 }
 .main-logo {
   display: flex;
   flex-direction: row;
-}
-
-.svg-add:hover {
-  fill: white;
 }
