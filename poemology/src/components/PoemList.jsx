@@ -18,7 +18,7 @@ const PoemList = () => {
   }, []);
   return poems.map((poem) => (
     <Poem
-      key={poem.id}
+      key={poem._id}
       title={poem.title}
       author={poem.author}
       content={poem.content}

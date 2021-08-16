@@ -1,4 +1,4 @@
-import "../poem.css";
+import "../styles/poem.css";
 
 const poem = (props) => {
   return (

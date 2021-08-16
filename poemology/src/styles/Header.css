@@ -1,0 +1,31 @@
+@font-face {
+  font-family: bulFont;
+  src: url(./bulFont.ttf) format("truetype");
+}
+
+.main-logo-header {
+  font-family: bulFont;
+  text-align: center;
+  margin: auto;
+}
+
+.main-addPoem-btn {
+  border-radius: 50px;
+  padding: 10px;
+  height: 50px;
+  border: none;
+  margin-top: 20px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.main-addPoem-btn:hover {
+  background: blue;
+}
+.main-logo {
+  display: flex;
+  flex-direction: row;
+}
+
+.svg-add:hover {
+  fill: white;
+}
