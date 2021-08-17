@@ -1,9 +1,8 @@
-import "./styles/App.css";
 import Header from "./components/Header";
 import PoemPage from "./pages/PoemPage";
 import PoemList from "./components/PoemList";
+import InputPoem from "./components/InputPoem.jsx";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import InputPoem from "./components/InputPoem";
 import { Provider } from "./context";
 
 function App() {

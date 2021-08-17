@@ -19,9 +19,15 @@ export function Provider(props) {
   }, []);
 
   const like = (id) => {
-    axios.put("https://poemology-api.herokuapp.com/poem", {
-      id,
-    });
+    axios
+      .patch(`https://poemology-api.herokuapp.com/poem/${id}`, {
+        likes: poems.likes++,
+      })
+      .then((res) => {
+        console.log(res);
+      })
+      .catch((err) => console.error(err));
+
     const updatedPoems = [...poems];
     const poem = updatedPoems.find(({ _id }) => _id === id);
     poem.liked = !poem.liked;
