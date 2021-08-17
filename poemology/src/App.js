@@ -12,13 +12,9 @@ function App() {
       <Router>
         <Header />
         <Switch>
-          <Route exact path="/">
-            <PoemList />
-          </Route>
+          <Route exact path="/" component={PoemList} />
+          <Route path="/add" component={InputPoem} />
           <Route path="/:poemId" component={PoemPage} />
-          <Route path="/add">
-            <InputPoem />
-          </Route>
         </Switch>
       </Router>
     </Provider>

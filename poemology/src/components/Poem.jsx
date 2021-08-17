@@ -24,10 +24,11 @@ const Poem = (props) => {
             props.like(props._id);
           }}
         >
-          <i className={`fas fa-heart ${props.liked ? " press" : ""}`}></i>
+          <i className={`fas fa-heart ${props.liked ? " press" : ""}`}>
+            {props.likes}
+          </i>
           <span className={`${props.liked ? " press" : ""}`}>liked!</span>
         </div>
-        {props.likes}
       </div>
     </div>
   );
