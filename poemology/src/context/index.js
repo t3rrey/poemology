@@ -19,9 +19,11 @@ export function Provider(props) {
   }, []);
 
   const like = (id) => {
+    const findPoem = poems.find(({ _id }) => _id === id);
+    const addLike = findPoem.likes + 1;
     axios
       .patch(`https://poemology-api.herokuapp.com/poem/${id}`, {
-        likes: poems.likes++,
+        likes: addLike,
       })
       .then((res) => {
         console.log(res);

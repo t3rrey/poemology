@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { useHistory } from "react-router-dom";
 import "../styles/poem.css";
 import "../styles/like.css";
