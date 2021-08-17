@@ -1,22 +1,27 @@
 import "./styles/App.css";
 import Header from "./components/Header";
+import PoemPage from "./pages/PoemPage";
 import PoemList from "./components/PoemList";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import InputPoem from "./components/InputPoem";
+import { Provider } from "./context";
 
 function App() {
   return (
-    <Router>
-      <Header />
-      <Switch>
-        <Route exact path="/">
-          <PoemList />
-        </Route>
-        <Route path="/add">
-          <InputPoem />
-        </Route>
-      </Switch>
-    </Router>
+    <Provider>
+      <Router>
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            <PoemList />
+          </Route>
+          <Route path="/:poemId" component={PoemPage} />
+          <Route path="/add">
+            <InputPoem />
+          </Route>
+        </Switch>
+      </Router>
+    </Provider>
   );
 }
 

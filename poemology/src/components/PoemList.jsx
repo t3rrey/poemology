@@ -1,30 +1,11 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useContext } from "react";
 import Poem from "./Poem";
+import Context from "../context";
 
 const PoemList = () => {
-  const [poems, setPoems] = useState([]);
+  const { poems, like } = useContext(Context);
 
-  useEffect(() => {
-    axios
-      .get("https://poemology-api.herokuapp.com/poem")
-      .then((res) => {
-        console.log(res);
-        setPoems(res.data);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
-  }, []);
-  return poems.map((poem) => (
-    <Poem
-      key={poem._id}
-      title={poem.title}
-      author={poem.author}
-      content={poem.content}
-      likes={poem.likes}
-    />
-  ));
+  return poems.map((poem) => <Poem key={poem._id} like={like} {...poem} />);
 };
 
 export default PoemList;
