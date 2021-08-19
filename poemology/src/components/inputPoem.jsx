@@ -51,10 +51,12 @@ const InputPoem = () => {
           onChange={handleChangeAuthor}
         />
         <label htmlFor="content">Poem: </label>
-        <input
-          type="text"
+        <textarea
+          rows={8}
+          cols={20}
           name="content"
           value={content}
+          // style={{ width: content.length * 15 + "px" }}
           onChange={handleChangeContent}
         />
         <input type="submit" />
